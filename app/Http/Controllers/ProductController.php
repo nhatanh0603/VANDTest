@@ -148,7 +148,7 @@ class ProductController extends Controller
     {
         $validated = $request->validate([
             'store_id' => 'required|integer',
-            'slug' => 'required|string|max:50|unique:products|alpha_dash',
+            'slug' => 'required|string|max:50|alpha_dash',
             'display_name' => 'required|string',
             'description' => 'sometimes|string|nullable',
             'price' => 'required|decimal:2',

@@ -106,7 +106,7 @@ class StoreController extends Controller
     public function storeValidate(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:50|unique:stores|alpha_dash',
+            'name' => 'required|string|max:50|alpha_dash',
             'display_name' => 'required|string',
             'description' => 'sometimes|string|nullable',
         ]);
